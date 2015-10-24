@@ -1,46 +1,150 @@
-body{padding: 10px;}
-.login_form{text-align: center; margin: auto; margin-top: 200px; width: 200px;}
-.header{height: 70px; border-bottom: 1px solid #ccc}
-.sidebar{min-height: 400px;  border-right: 1px solid #ccc}
-.content{min-height: 400px;  padding: 20px;}
-.menuList{ margin-left: 10px; margin-top: 30px;}
-.menuList li{list-style: none;}
-.menuList li a{ color: #000000;}
-.userSettings{float: right; margin-right: 40px; margin-top: 20px;}
-.settingsIcon{margin-right: 20px}
-.messagesForm{position: fixed;bottom: 0;}
-.settingsButton{margin-top: -10px;margin-right: 40px;}
-form label.error{color: red; margin-left: 30px; }
-form select.error, form input.error, form textarea.error{color: red; border-color: red;}
-form select.valid, form input.valid, form textarea.valid{color: green; border-color: green;}
+/* reset.css */
+html {margin:0;padding:0;border:0;}
+body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, dialog, figure, footer, header, hgroup, nav, section {margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+article, aside, details, figcaption, figure, dialog, footer, header, hgroup, menu, nav, section {display:block;}
+body {line-height:1.5;background:white;}
+table {border-collapse:separate;border-spacing:0;}
+caption, th, td {text-align:left;font-weight:normal;float:none !important;}
+table, th, td {vertical-align:middle;}
+blockquote:before, blockquote:after, q:before, q:after {content:'';}
+blockquote, q {quotes:"" "";}
+a img {border:none;}
+:focus {outline:0;}
 
-#portfolioList tr{cursor: pointer;}
-.right_sidebar{border-left: 1px solid #ccc;}
 
-.active_button {color: #E32A2A;}
-.not_read{background: none repeat scroll 0% 0% #35803c !important;; color: #FFF !important;}
-#validForm label.error {
-    color: red;
-    margin-left: 0px;
+/** Шапка **/
+
+#header_top, #header_bot{
+    height: 30px;
+    width: 100%;
+    padding: 15px 0;
+}
+#header_top{
+    background: #0091ca;
+}
+#header_top a{
+    color: white;
+}
+.header_block_right, .header_block_left{
+    float: left;
+}
+
+.header_block_left{
+    width: 750px;
+}
+.header_block_right{
+    width: 235px;
+    vertical-align: top;
+    margin-left: 15px;
+}
+
+.top_menu, .top_social_links, .login_top_button, .wrap_city_select, .profile_menu{
+    vertical-align: middle;
+    font-size: 14px;
+    float: left;
+}
+.city_select{
+    width: 150px;
+}
+.top_menu{
+    margin: 0 15px;
+    padding: 0;
+    margin-top: 5px;
+}
+.top_menu li{
+    margin: 0 5px;
+    list-style: none;
+    display: inline-block;
+}
+.top_social_links{
+    float: right;
+    margin-top: 5px;
+}
+.profile_menu{
+}
+.login_top_button{
+    float: right;
+}
+
+#header_bot{
+
+}
+.header_wrap{
+    margin: 0 auto;
+    width: 1000px;
+}
+.site_logo {
+    display: inline-block;
+}
+
+.site_logo a{
     display: block;
-    font-size: 12px;
+    width: 150px;
+    height: 30px;
+    background: #0c8031;
 }
-#dropDown_portfolio{
-    border: 1px solid #ccc;
-    max-width: 150px;
-    display: none;
-    background: #f0f0f0;
-    position: absolute;
+.category_menu{
+    margin-left: 15px;
+    display: inline-block;
+    vertical-align: top;
 }
-.ticker_field{width: 110px;}
-.uk-table td {
+.top_search{
+    display: inline-block;
+    float: right;
+}
+.top_search i{
+    color: grey;
+}
+.top_search input{
+    width: 235px;
+    color: grey;
+    font-size: 14px;
+    border-radius: 15px !important;
+}
+
+
+
+
+/** Контент **/
+aside#wrap{
+    width: 1000px;
+    margin: 0 auto;
+    padding: 0 12px;
+    font-size: 0;
+}
+
+div#map, div#search_bar{
     font-size: 14px;
 }
-.suc_row{
-    background: #D2FFD2;
+div#map{
+    content: '';
+    width: 748px;
+    height: 498px;
+    background: #0091ca;
+    display: inline-block;
+    padding: 1px;
 }
-.edit_row, .price_row{width: 100px;}
-.direction_form{ margin-left: 20px; display: inline-block;border: 1px solid #ccc;padding: 5px; }
-.click_cur{cursor: pointer;}
-.click_cur:hover{background: #a9d3ac;}
-.click_cur_form{  width: 60px; }
+div#search_bar{
+    content: '';
+    margin-left: 15px;
+    width: 233px;
+    height: 500px;
+    display: inline-block;
+    border: 1px solid #0091ca;
+    border-radius: 10px;
+
+}
+
+
+
+
+
+
+
+
+div#banner{
+    margin-top: 15px;
+    width: 1000px;
+    height: 150px;
+    background: #0091ca;
+}

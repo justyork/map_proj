@@ -18,19 +18,6 @@ abstract class C_Base extends Controller {
     // Виртуальный обработчик запроса
     protected function OnInput(){
 
-        /*if(!Auth::Check()){
-            if($_SERVER['REQUEST_URI'] != '/')
-                JL::redirect('/');
-
-            $this->auth = false;
-            return false;
-        }
-        Auth::PrepareAuth();
-
-        if( !Auth::Can( 'SHOW_PANEL' ) )
-            die( 'Access denied.  Code 0' );
-		*/ 
-		
 		$this->menu = $this->GenerateMenu();
     }
     
