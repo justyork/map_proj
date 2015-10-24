@@ -1,0 +1,46 @@
+body{padding: 10px;}
+.login_form{text-align: center; margin: auto; margin-top: 200px; width: 200px;}
+.header{height: 70px; border-bottom: 1px solid #ccc}
+.sidebar{min-height: 400px;  border-right: 1px solid #ccc}
+.content{min-height: 400px;  padding: 20px;}
+.menuList{ margin-left: 10px; margin-top: 30px;}
+.menuList li{list-style: none;}
+.menuList li a{ color: #000000;}
+.userSettings{float: right; margin-right: 40px; margin-top: 20px;}
+.settingsIcon{margin-right: 20px}
+.messagesForm{position: fixed;bottom: 0;}
+.settingsButton{margin-top: -10px;margin-right: 40px;}
+form label.error{color: red; margin-left: 30px; }
+form select.error, form input.error, form textarea.error{color: red; border-color: red;}
+form select.valid, form input.valid, form textarea.valid{color: green; border-color: green;}
+
+#portfolioList tr{cursor: pointer;}
+.right_sidebar{border-left: 1px solid #ccc;}
+
+.active_button {color: #E32A2A;}
+.not_read{background: none repeat scroll 0% 0% #35803c !important;; color: #FFF !important;}
+#validForm label.error {
+    color: red;
+    margin-left: 0px;
+    display: block;
+    font-size: 12px;
+}
+#dropDown_portfolio{
+    border: 1px solid #ccc;
+    max-width: 150px;
+    display: none;
+    background: #f0f0f0;
+    position: absolute;
+}
+.ticker_field{width: 110px;}
+.uk-table td {
+    font-size: 14px;
+}
+.suc_row{
+    background: #D2FFD2;
+}
+.edit_row, .price_row{width: 100px;}
+.direction_form{ margin-left: 20px; display: inline-block;border: 1px solid #ccc;padding: 5px; }
+.click_cur{cursor: pointer;}
+.click_cur:hover{background: #a9d3ac;}
+.click_cur_form{  width: 60px; }

@@ -1,0 +1,5 @@
+RewriteEngine on
+
+RewriteRule ^logout$ /index.php?type=index&action=logout
+
+RewriteRule ^(\w+)(?:\/(\w+)(?:\/(\d+))?)?$ /index.php?type=$1&action=$2&id=$3
