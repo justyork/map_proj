@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="/assets/css/uikit.almost-flat.min.css" type="text/css">
     <link rel="stylesheet" href="<?= ASSET_FRONT_DIR ?>/css/style.css" type="text/css">
     <title><?= $title ?></title>
+    <script type="text/javascript" charset="UTF-8" src="/assets/js/jquery.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="/assets/js/uikit.min.js"></script>
 </head>
 <body>
 
@@ -15,12 +17,13 @@
             <div class="header_block_left">
                 <div class="wrap_city_select">
                     <select name="country" class="city_select">
-                        <option>Москва</option>
-                        <option>Иркутск</option>
+                        <?foreach($data['city_list'] as $city):?>
+                            <option value="<?=$city['id']?>" lat="<?=$city['lat']?>" lng="<?=$city['lat']?>"><?=$city['name']?></option>
+                        <?endforeach?>
                     </select>
                 </div>
                 <ul class="top_menu">
-                    <li><a href="">Добавить акции</a></li>
+                    <li><a href="/add/">Добавить акцию</a></li>
                     <li><a href="">Новости</a></li>
                     <li><a href="">Вопросы и ответы</a></li>
                     <li><a href="">О сервисе</a></li>
@@ -44,42 +47,45 @@
     <div id="header_bot">
         <div class="header_wrap">
             <div class="site_logo">
-                <a href="/"></a>
+                <a href="/">MapShare</a>
             </div>
-            <div class="category_menu">
-                <div class="uk-button-group">
-                    <a class="uk-button" href="">Еда</a>
-                    <a class="uk-button" href="">Одежда</a>
-                    <a class="uk-button" href="">Развлечения</a>
-                    <a class="uk-button" href="">Техника</a>
-                    <a class="uk-button" href="">Красота</a>
-                    <a class="uk-button" href="">Здоровье</a>
-                    <div class="uk-button-dropdown" data-uk-dropdown="{mode:'click'}" aria-haspopup="true" aria-expanded="false">
-                        <button class="uk-button">Другое <i class="uk-icon-caret-down"></i></button>
-                        <div class="uk-dropdown uk-dropdown-bottom">
-                            <ul class="uk-nav uk-nav-dropdown">
-                                <li><a href="#">Item</a></li>
-                                <li><a href="#">Another item</a></li>
-                            </ul>
+            <?if($data['main_page']):?>
+                <div class="category_menu">
+                    <div class="uk-button-group">
+                        <a class="uk-button" href="">Еда</a>
+                        <a class="uk-button" href="">Одежда</a>
+                        <a class="uk-button" href="">Развлечения</a>
+                        <a class="uk-button" href="">Техника</a>
+                        <a class="uk-button" href="">Красота</a>
+                        <a class="uk-button" href="">Здоровье</a>
+                        <div class="uk-button-dropdown" data-uk-dropdown="{mode:'click'}" aria-haspopup="true" aria-expanded="false">
+                            <button class="uk-button">Другое <i class="uk-icon-caret-down"></i></button>
+                            <div class="uk-dropdown uk-dropdown-bottom">
+                                <ul class="uk-nav uk-nav-dropdown">
+                                    <li><a href="#">Item</a></li>
+                                    <li><a href="#">Another item</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-            </div>
-            <div class="top_search">
-                <div class="uk-form-icon">
-                    <i class="uk-icon-search"></i>
-                    <input type="text">
                 </div>
-            </div>
+                <div class="top_search">
+                    <div class="uk-form-icon">
+                        <i class="uk-icon-search"></i>
+                        <input type="text">
+                    </div>
+                </div>
+            <?endif?>
 
         </div>
     </div>
 </header>
-<aside id="wrap">
-    <div id="map" width="748" height="498"></div>
-    <div id="search_bar"></div>
-    <div id="banner"></div>
+<aside id="wrap" class="<?=$data['main_page'] ? '' : 'inner_wrap'?>">
+    <div class="<?=$data['main_page'] ? '' : 'content'?>">
+        <?=$content?>
+
+    </div>
 </aside>
 
 <footer>
@@ -87,10 +93,7 @@
 </footer>
 
 
-<script type="text/javascript" charset="UTF-8" src="/assets/js/jquery.js"></script>
-<script type="text/javascript" charset="UTF-8" src="/assets/js/uikit.min.js"></script>
-<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-<script type="text/javascript" charset="UTF-8" src="<?= ASSET_FRONT_DIR ?>/js/map.js"></script>
+<script type="text/javascript" charset="UTF-8" src="/assets/front/js/script.js"></script>
 
 </body>
 </html>

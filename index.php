@@ -6,21 +6,19 @@ if(DEBUG){
     ini_set('display_errors', 'On');
 }
 
-//session_start();
+@session_start();
 require_once( 'config.php' );
 require_once ( MODELS_DIR . '/JL.php' );
+spl_autoload_register( 'JL::AutoLoad' );
 
-/*
+
 //Создаём новый объект. Также можно писать и в процедурном стиле
 $MC = new Memcache;
 
 //Соединяемся с нашим сервером
 $MC->connect('127.0.0.1', 11211) or die("Could not connect");
-*/
 require_once ( 'core/Controller.php' );
-spl_autoload_register( 'JL::AutoLoad' );
-
-global $DB;
+global $DB, $LNG, $DBUG;
 $DB = startup();
 
 

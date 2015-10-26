@@ -11,7 +11,9 @@ blockquote, q {quotes:"" "";}
 a img {border:none;}
 :focus {outline:0;}
 
-
+body{
+    background: rgba(249, 249, 249, 0.74);
+}
 /** Шапка **/
 
 #header_top, #header_bot{
@@ -81,7 +83,9 @@ a img {border:none;}
     display: block;
     width: 150px;
     height: 30px;
-    background: #0c8031;
+    color: #0091ca;
+    font-size: 27px;
+    font-weight: bolder;
 }
 .category_menu{
     margin-left: 15px;
@@ -109,10 +113,13 @@ a img {border:none;}
 aside#wrap{
     width: 1000px;
     margin: 0 auto;
-    padding: 0 12px;
-    font-size: 0;
+}
+.content{
+    width: 100%;
+    padding: 12px;
 }
 
+/** Главная страница **/
 div#map, div#search_bar{
     font-size: 14px;
 }
@@ -126,7 +133,7 @@ div#map{
 }
 div#search_bar{
     content: '';
-    margin-left: 15px;
+    margin-left: 11px;
     width: 233px;
     height: 500px;
     display: inline-block;
@@ -135,6 +142,13 @@ div#search_bar{
 
 }
 
+
+/** Внутренние страницы **/
+.inner_wrap{
+    border: 1px solid #0091ca;
+    border-radius: 3px;
+    min-height: 100px;
+}
 
 
 
@@ -148,3 +162,4 @@ div#banner{
     height: 150px;
     background: #0091ca;
 }
+

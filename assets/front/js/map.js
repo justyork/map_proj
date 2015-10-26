@@ -7,6 +7,10 @@ $(document).ready(function(){
     ymaps.ready(init);
     var myMap;
 
+    /** Смена города **/
+    $('.city_select').change(function(){
+
+    });
 })
 
 

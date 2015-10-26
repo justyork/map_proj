@@ -18,7 +18,9 @@ abstract class C_Base extends Controller {
     // Виртуальный обработчик запроса
     protected function OnInput(){
 
-		$this->menu = $this->GenerateMenu();
+        $this->data['city_list'] = City::GetAll();
+        $this->data['main_page'] = false;
+
     }
     
     //
@@ -33,7 +35,6 @@ abstract class C_Base extends Controller {
             'data' => $this->data, 
 
 	    );
- 
  
         $page = $this->Template( 'main', $vars );
 
@@ -53,18 +54,5 @@ abstract class C_Base extends Controller {
 
 
         return $th->$action();
-    }
-    private function GenerateMenu(){
-        return  array(
-            'Home' => array( '', ''), 
-            'Exit' => array( 'logout', ''),
-       );
-    }
-    private function GenerateMenuAdmin(){
-        return  array(
-            'Home' => array( 'admin', ''),
-            'Users' => array( 'admin/users', ''), 
-            'Exit' => array( 'logout', ''),
-       );
     }
 }
