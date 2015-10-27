@@ -7,6 +7,7 @@
  */
 ?>
 
+test
 
 <script src="/assets/js/ckeditor/ckeditor.js"></script>
 
