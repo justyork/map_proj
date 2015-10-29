@@ -8,6 +8,7 @@
     <title><?= $title ?></title>
     <script type="text/javascript" charset="UTF-8" src="/assets/js/jquery.js"></script>
     <script type="text/javascript" charset="UTF-8" src="/assets/js/uikit.min.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="/assets/js/jquery.cookie.js"></script>
 </head>
 <body>
 
@@ -95,5 +96,9 @@
 
 <script type="text/javascript" charset="UTF-8" src="/assets/front/js/script.js"></script>
 
+<?if(DEBUG):?>
+    <link rel="stylesheet" href="/assets/css/debug.css" type="text/css">
+    <?=JL::renderPart('front/common/debug')?>
+<?endif?>
 </body>
 </html>

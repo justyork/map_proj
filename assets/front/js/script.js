@@ -1,8 +1,13 @@
 $(document).ready(function(){
 
-    CKEDITOR.replace( 'ckeditor', {
-        uiColor: '#ffffff',
-        height: 150,
-        width: 400
-    } );
+    if($('#ckeditor').val() != null){
+        CKEDITOR.replace( 'ckeditor', {
+            uiColor: '#ffffff',
+            height: 150,
+            width: 400
+        } );
+
+    }
+
+
 })

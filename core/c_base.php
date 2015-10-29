@@ -35,9 +35,10 @@ abstract class C_Base extends Controller {
             'data' => $this->data, 
 
 	    );
- 
-        $page = $this->Template( 'main', $vars );
-
+        if(JL::ex('type', 'ajax'))
+            $page = '';
+        else
+            $page = $this->Template( 'main', $vars );
 
         echo $page;
     }

@@ -8,7 +8,7 @@
 ?>
 
 
-<div id="map" width="748" height="498"></div>
+<div id="map" class="main-page-map"></div>
 <div id="search_bar"></div>
 <div id="banner"></div>
 

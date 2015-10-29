@@ -1,0 +1,22 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: York
+ * Date: 29.10.2015
+ * Time: 0:08
+ */
+
+class Addresses {
+    private static  $_table_name = 'addresses';
+
+    public static function Search($search){
+
+        $sth = DB::query("SELECT * FROM ".self::$_table_name." WHERE `name` LIKE :name", array('name' => '%'.strtolower($search).'%') );
+        $data = $sth->fetchAll();
+        if($data)
+            return $data;
+
+        return false;
+
+    }
+} 

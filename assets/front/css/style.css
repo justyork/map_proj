@@ -14,6 +14,10 @@ a img {border:none;}
 body{
     background: rgba(249, 249, 249, 0.74);
 }
+
+.clear{clear: both;}
+
+
 /** Шапка **/
 
 #header_top, #header_bot{
@@ -124,13 +128,22 @@ div#map, div#search_bar{
     font-size: 14px;
 }
 div#map{
-    content: '';
-    width: 748px;
-    height: 498px;
     background: #0091ca;
     display: inline-block;
     padding: 1px;
 }
+
+
+.add-point-map{
+    width: 100%;
+    height: 400px;
+}
+.main-page-map{
+    width: 748px;
+    height: 498px;
+}
+
+
 div#search_bar{
     content: '';
     margin-left: 11px;
@@ -149,9 +162,34 @@ div#search_bar{
     border-radius: 3px;
     min-height: 100px;
 }
+.add-point-all input[type="text"], .add-point-all select {
+    width: 187px;
+}
 
+input.point-find-prop {
+    display: block;
+    margin-left: 71px;
+    margin-top: 5px;
+}
 
+.date-min-row input[type="text"]{
+    width: 158px;
+}
 
+.text-before-date{
+    width: 25px;
+    display: inline-block;
+}
+
+.add-point-form-area{
+    width: 42%;
+    display: inline-block;
+}
+.add-point-map-area{
+    display: inline-block;
+    vertical-align: top;
+    width: 55%;
+}
 
 
 

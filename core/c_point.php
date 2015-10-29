@@ -17,10 +17,14 @@ class C_Point extends C_Base{
 		parent::OnOutput();
 	}
 
+
+
     public function actionAdd(){
         $this->tpl = 'front/point/add';
         $this->title = 'Main Page title';
         $this->data['hide_top'] = true;
+        $this->data['categories_list'] = JL::ListData(Categories::GetAll());
+
     }
 
     public function actionLogout(){

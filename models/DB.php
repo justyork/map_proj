@@ -17,6 +17,7 @@ class DB {
         else{
             $sth = $DB->prepare($q);
             $sth->execute($params);
+
         }
         return $sth;
     }
@@ -30,4 +31,22 @@ class DB {
         $sth->execute($params);
     }
 
+    public static function updateFieldsByArr($arr){
+        $ret = array();
+        foreach($arr as $key => $val){
+            $ret[] = "{$key} = :{$key}";
+        }
+
+        return implode(', ', $ret);
+    }
+    public static function insertFieldsByArr($arr){
+        $ret = array();
+        foreach($arr as $key => $val){
+            $ret['insert'][] = "{$key}";
+            $ret['val'][] = ":{$key}";
+        }
+
+
+        return "(".implode(',', $ret['insert']).") VALUES (".implode(',', $ret['val']).")";
+    }
 } 

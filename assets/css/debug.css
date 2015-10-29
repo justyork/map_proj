@@ -10,6 +10,7 @@
 .debug-wrap h2{font-size: 25px;}
 .debug-wrap li {
     list-style: none;
+    margin-bottom: 2px;
 }
 .debug-wrap li span{
     display: inline-block;

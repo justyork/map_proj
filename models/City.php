@@ -12,8 +12,6 @@ class City {
      * Получить все города
      */
     public static function GetAll(){
-        global $MC;
-
         $sth = DB::query("SELECT * FROM city");
         return $sth->fetchAll();
     }
